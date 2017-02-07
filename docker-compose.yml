@@ -1,0 +1,17 @@
+version: '2'
+services:
+  composer:
+    build: ./composer
+    container_name: cpt-composer
+    volumes:
+      - ./composer/composer:/composer
+    volumes_from:
+      - plugin
+    depends_on:
+      - plugin
+  plugin:
+    build: ./plugin
+    container_name: cpt-plugin
+    volumes:
+      - ./plugin:/app
+
