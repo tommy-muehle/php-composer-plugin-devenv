@@ -1,4 +1,4 @@
-composer/composer/
+composer/composer/*
 !composer/composer/composer.json
 plugin/vendor
 plugin/composer.lock
