@@ -12,7 +12,9 @@ For a full description look at [my related blog post](https://tommy-muehle.githu
 
 ```
 git clone https://github.com/tommy-muehle/php-composer-plugin-devenv.git composer-plugin-devenv
-cd composer-plugin-devenv
+cd composer-plugin-devenv/plugin
+composer install
+cd ../
 docker-compose build
 ```
 
@@ -33,5 +35,5 @@ docker-compose run --rm composer new-plugin:sample
 ```
 
 You can also customize some global Composer settings in 
-the [composer directory] if is necessary. And you can also extend the [plugin Dockerfile](plugin/Dockerfile) to 
+the [composer directory](composer) if is necessary. And you can also extend the [plugin Dockerfile](plugin/Dockerfile) to 
 add PHPUnit or something else.
